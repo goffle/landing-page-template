@@ -1,0 +1,132 @@
+.footer {
+    background-color: #eee;
+    
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .footer-social {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            margin-bottom: 0;
+            background-image: url('../../assets/icons/phone-receiver.svg');
+            background-repeat: no-repeat;                
+            background-size: contain;
+            background-position: left center;
+            padding-left: 35px;
+
+            a {
+                margin-left: 10px;
+                color: #007bff;
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            display: flex;
+            margin-left: 10px;
+
+            li {
+                margin-left: 15px;
+            }
+
+            a{
+                color: #000;
+                text-decoration: none;
+                display: block;
+                height: 20px;
+                width: 20px;
+                background-repeat: no-repeat;                
+                background-size: cover;
+            }
+            .email-icon{
+                background-image: url('../../assets/icons/close-envelope.svg');
+            }
+            .fb-icon{
+                background-image: url('../../assets/icons/facebook-logo.svg');
+            }
+            .twitter-icon{
+                background-image: url('../../assets/icons/twitter-logo.svg');
+            }
+            .gplus-icon{
+                background-image: url('../../assets/icons/google-plus.svg');
+            }
+            .linkedin-icon{
+                background-image: url('../../assets/icons/linkedin-logo.svg');
+            }
+        }
+
+    }
+    .footer-body{
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h4 {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 10px;
+
+            li {
+                margin-bottom: 5px;
+            }
+
+        }
+    }
+    .copy-right {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+
+        ul {
+            margin-left: 30px;
+            display: flex;
+    
+            li{
+                margin-right: 15px;
+            }        
+
+        }
+    }
+    @media screen and (max-width: 479px) {
+        .footer-social {
+            flex-direction: column;
+            align-items: center;
+
+            p{
+                margin-bottom: 15px;
+            }
+
+        }
+        .copy-right {
+             flex-direction: column;
+             align-items: center;
+
+            ul {
+                margin-top: 10px;
+            }
+
+         }
+    }
+
+     
+    && a{
+        color: #999;
+        text-decoration: none;
+        transition: color 0.4s;
+
+        &:hover {
+            color: #333;
+        }
+    }
+    
+
+}

@@ -1,0 +1,151 @@
+.header-top {
+  width: 100%;
+  color: white;
+  padding-bottom: 40px;
+
+  .mobile-menu .row {
+    align-items: center;
+  }
+
+  .name {
+    font-size: 30px;
+    color: white !important;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    ul {
+      display: flex;
+      margin-bottom: 0;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-left: 15px;
+      }
+      a {
+        display: block;
+        padding: 0 5px 10px;
+        font-size: 15px;
+        font-family: "Work Sans", Arial, sans-serif;
+        border-bottom: 2px solid transparent;
+        transition: all 0.4s;
+        color: white;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          color: white;
+          border-bottom-color: white;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      margin-left: 5px;
+    }
+    .btn-link {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 20px 0 0;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu-btn {
+      display: block;
+      cursor: pointer;
+      height: 25px;
+      width: 25px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 20px;
+      margin-top: 3px;
+    }
+
+    .inner-header {
+      position: relative;
+
+      &.open {
+        &:after {
+          content: "";
+          display: block;
+          position: fixed;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 900;
+        }
+
+        .menu ul {
+          transform: translateX(0);
+        }
+      }
+      .menu {
+        justify-content: normal;
+
+        .logo {
+          margin-bottom: 15px;
+          border-bottom: 1px solid #eee;
+        }
+
+        ul {
+          flex-direction: column;
+          position: fixed;
+          left: 0;
+          top: 0;
+          height: 100%;
+          padding-top: 60px;
+          background: #fff;
+          width: 250px;
+          z-index: 1000;
+          transform: translateX(-100%);
+          transition: all 0.4s;
+
+
+          li {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+          a {
+            padding: 0;
+            border-bottom: none;
+            color: #222;
+          }
+        }
+        .buttons {
+          flex-direction: column;
+          justify-content: space-around;
+          margin-left: 0;
+
+          .btn {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
